@@ -95,6 +95,6 @@ const findEmployeeByFirstName = (employeeSuperArray, name) => {
     let payable = eligibleDates.reduce(function (memo, d) {
         return memo + wagesEarnedOnDate.call(this, d)
     }.bind(this), 0) // <== Hm, why did we need to add bind() there? We'll discuss soon!
-
+// if you want to know, look up the reading following this lab about something called the Lost Context Bug. 
     return payable
 }
